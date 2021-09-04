@@ -29,3 +29,8 @@ export const changeColor = (color: string) => {
   )
 }
 
+export const click = (x:number, y:number) => {
+  PixelPainterStore.update(
+    state => {state.canvas[x][y] = state.color}
+  )
+}
