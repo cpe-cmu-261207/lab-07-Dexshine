@@ -29,8 +29,15 @@ export const changeColor = (color: string) => {
   )
 }
 
-export const click = (x:number, y:number) => {
+export const clickCell = (x:number, y:number) => {
   PixelPainterStore.update(
     state => {state.canvas[x][y] = state.color}
   )
 }
+
+export const clearCanvas = () => {
+  PixelPainterStore.update(
+    state => {state.canvas = createEmptyCanvas()}
+  )
+}
+
