@@ -1,4 +1,4 @@
-import { clearCanvas } from "../stores/PixelPainterStore"
+import { clearCanvas, randomCanvas } from "../stores/PixelPainterStore"
 
 const Utility = () => {
   return (
@@ -6,7 +6,9 @@ const Utility = () => {
       <button 
         onClick={() => clearCanvas()}
         className="w-36">Clear</button>
-      <button className="w-36">Random color</button>
+      <button 
+        onClick={() => randomCanvas()}
+        className="w-36">Random color</button>
     </div>
   )
 }
